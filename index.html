@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Os Simpsons</title>
+    <link rel="icon" href="./src/imgs/The_Simpsons_yellow_logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="js/carregar.api.simpsons.js" defer type="module"></script>
+    <script src="./js/search.js" defer type="module"></script>
+    
+</head>
+<body id="comando_principal">
+
+    <!-- Define a imagem de fundo do site -->
+    <div class="background"></div>
+
+    <header>
+
+        <!-- Define a imagem do logo. -->
+        <img src="./src/imgs/The_Simpsons_yellow_logo.svg" href="Os Simpsons"></img>
+
+        <!-- Cria a barra e botão de pesquisa, e chama a função onclick. -->
+        <div class="caixa_pesquisa">
+            <input type="text" class="caixa" id="searchInput" placeholder="Digite o nome do personagem">
+            <button id="searchButton" class="botao" onclick="scrollParaPersonagens()">Pesquisar</button>
+            <div id="quote"></div>
+        </div>
+
+        <!-- Cria os botões principais, e indica para qual parte ir ao clicar. -->
+        <nav>
+            <a class="btn" href="#comando_principal">PRINCIPAL</a>
+            <a class="btn" href="#comando_sinopse">SINOPSE</a>
+            <a class="btn" href="#comando_personagens">PERSONAGENS</a>
+        </nav>
+
+        
+    </header>
+
+    <main>
+
+        <!-- Espaço reservado para ao clicar no botão principal. -->
+        <div id="comando_sinopse" class="comando_sinopse">
+            
+        </div>
+
+        <!-- Cria a caixa da Sinopse. -->
+        <div class="sinopse">
+            <p>
+                A família Simpson é composta por membros bem diferentes. Homer é um adulto-criança que trabalha em uma usina nuclear, Marge é a simples dona de casa que quer apenas ter uma família normal, Bart é um pequeno pestinha de 10 anos de idade que, provavelmente, segue os exemplos do pai.
+                Lisa tem apenas 8 anos, mas é bastante inteligente e anda é vegetariana e Maggie é apenas um bebê, mas deixa muito claro o que está sentindo de acordo com a intensidade que chupa a sua chupeta. As histórias da família são recheadas de humor inteligente e personagens inusitados.
+            </p>
+        </div>
+
+        <!-- Espaço reservado para ao clicar no botão principal. -->
+        <div id="comando_personagens" class="comando_personagens"></div>
+
+        <!-- Espaço reservado para criação dos cards no js. -->
+        <div class="container" id="container">
+
+        </div>
+
+    </main> 
+
+    <script>
+        // Cria a função de rolamento ao clicar no botão pesquisar.
+        function scrollParaPersonagens() {
+            document.getElementById('comando_personagens').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+    
+</body>
+</html>
